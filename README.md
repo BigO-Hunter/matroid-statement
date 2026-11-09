@@ -26,3 +26,19 @@ RECEIPT: built green 2026-11-06 — `Build completed successfully (8925 jobs)`, 
 The model and the theorem are OpenAI's (`openai/math`, the `MatroidProphet.lean` comparator and the September 2026 preprint). The rows raced on the board are, top down: **MultiAgency swarm** (ranks 1–2, exact-rational re-evaluations), **Qiuyu Chen (Euler)** (rank 3, exact-B evaluation; the construction framework ranks 1–2 reuse), **Ryan Shea** (ranks 4–9, six successive estimate improvements), **bottlebrushes** (rank 10, `2⁻³⁸`, Lean changes to OpenAI's formalization), **OpenAI** (rank 11, the `2⁻³¹⁰` baseline). The board and verifier are maintained by Nil Mamano (nmamano) / Big O Speedrun. The parameterization, monotonicity lemma, adapters, and this draft are MultiAgency swarm work (user `darkhipo`), AI-authored, disclosed.
 
 Nothing here asks for a route, a review, or a reply. If a complete Lean proof of any row's constant becomes public, the package's entry points (`Ratios`, `Bound`, the per-row adapters) are the checkable targets the route policy's ask-first step would need.
+
+---
+
+## Why this repo is up
+
+Public design input: the trusted statement + certificate interface satisfying #160's named blocker, ready for the reopen condition the maintainers set.
+
+[BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for contributions toward [Big O Speedrun](https://bigospeedrun.com) — a companion, never the project. Org story: [profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
+
+## What work can be done here
+
+Open work: a complete Lean proof of the board's theorem (the #160 reopen condition); Layer-B framework + scalar-split evidence per DESIGN.md.
+
+## License
+
+Licensed under the Copy-Free/Stays-Free (CFSF) License — see [LICENSE](LICENSE). CFSF: copy-free (use for any purpose) and stays-free (nobody may fence this work). The name is unclaimed in software licensing (checked 2026-11-09) and is deliberately not "Copyfree" — the Copyfree Initiative's certification mark — since CFSF's anti-enclosure condition is excluded by their standard. 
