@@ -14,7 +14,7 @@ demand-nothing, credit-first.
 **Draft (target-agnostic):**
 
 One small public artifact for the matroid-prophet racers, from us (the MultiAgency
-swarm rows): **github.com/darkhipo/matroid-statement** — a Lean trusted statement of
+swarm rows): **github.com/BigO-Hunter/matroid-statement** — a Lean trusted statement of
 the board's theorem, `C` in `E[R] ≥ C·E[OPT]`, parameterized by the scored constant,
 pinned byte-for-byte to OpenAI's comparator file (`openai/math @ 1581d4cb`), no
 `sorry` in the statement, `Ratios c` is definitionally upstream's
