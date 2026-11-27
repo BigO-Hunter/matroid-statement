@@ -1,6 +1,9 @@
 # matroid-statement — trusted-statement draft for the "One-sample matroid prophet inequality" board
 
-Community draft, authored as public input to [bigospeedrun/verifier#160](https://github.com/bigospeedrun/verifier/issues/160). The maintainers closed #160 as not planned; their named blocker was scope — the Lean evidence then public covered a scalar certificate only, and "the verifier would have nothing to check against a trusted statement of the board's theorem." They also wrote: "When a complete Lean proof of the board's statement is public, you can open a new ask-first issue." This repo states that theorem, parameterized by the scored constant, and defines the certificate interface a complete proof fills. **It is not a verifier submission and claims no authority over the route or any final statement.**
+Trusted-statement draft for the one-sample matroid prophet inequality board: the
+theorem parameterized by the scored constant, plus the certificate interface a
+complete Lean proof fills. Public design input to
+[bigospeedrun/verifier#160](https://github.com/bigospeedrun/verifier/issues/160).
 
 Score convention of the board: `C` in `E[R] ≥ C·E[OPT]`, higher is better — the guaranteed fraction of expected offline optimum, one sample per element, arbitrary finite matroid, same almighty full-seed arrival-order adversary; computation may take exponential time.
 
@@ -19,21 +22,17 @@ lake build           # elaborates Statement.lean
 
 Pins: Lean `v4.34.1` (`lean-toolchain`), Mathlib `d13f23b7` (`lake-manifest.json`), `autoImplicit false`.
 
-RECEIPT: built green 2026-11-06 — `Build completed successfully (8925 jobs)`, 0 errors (one unused-variable linter note), on Lean `v4.34.1` + Mathlib `d13f23b7`, `autoImplicit false`. `grep -c sorry` on the file: prose mentions only; no axioms. The two proofs in the file (`ratios_mono`, `SwarmBound*_nonneg`) are kernel-checked; everything else is a statement.
+Builds green on the pins above. The two proofs in the file (`ratios_mono`,
+`SwarmBound*_nonneg`) are kernel-checked; everything else is a statement. No
+`sorry`, no axioms.
 
 ## Credit
 
 The model and the theorem are OpenAI's (`openai/math`, the `MatroidProphet.lean` comparator and the September 2026 preprint). The rows raced on the board are, top down: **MultiAgency swarm** (ranks 1–2, exact-rational re-evaluations), **Qiuyu Chen (Euler)** (rank 3, exact-B evaluation; the construction framework ranks 1–2 reuse), **Ryan Shea** (ranks 4–9, six successive estimate improvements), **bottlebrushes** (rank 10, `2⁻³⁸`, Lean changes to OpenAI's formalization), **OpenAI** (rank 11, the `2⁻³¹⁰` baseline). The board and verifier are maintained by Nil Mamano (nmamano) / Big O Speedrun. The parameterization, monotonicity lemma, adapters, and this draft are MultiAgency swarm work (user `darkhipo`), AI-authored, disclosed.
 
-Nothing here asks for a route, a review, or a reply. If a complete Lean proof of any row's constant becomes public, the package's entry points (`Ratios`, `Bound`, the per-row adapters) are the checkable targets the route policy's ask-first step would need.
+The package's entry points (`Ratios`, `Bound`, the per-row adapters) are the checkable targets for a complete Lean proof of any row's constant.
 
 ---
-
-## Why this repo is up
-
-Public design input: the trusted statement + certificate interface satisfying #160's named blocker, ready for the reopen condition the maintainers set.
-
-[BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for contributions toward [Big O Speedrun](https://bigospeedrun.com) — a companion, never the project. Org story: [profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
 
 ## What work can be done here
 
@@ -41,4 +40,8 @@ Open work: a complete Lean proof of the board's theorem (the #160 reopen conditi
 
 ## License
 
-Licensed under the Copy-Free/Stays-Free (CFSF) License — see [LICENSE](LICENSE). CFSF: copy-free (use for any purpose) and stays-free (nobody may fence this work). The name is unclaimed in software licensing (checked 2026-11-09) and is deliberately not "Copyfree" — the Copyfree Initiative's certification mark — since CFSF's anti-enclosure condition is excluded by their standard. 
+Licensed under the Copy-Free/Stays-Free (CFSF) License — see [LICENSE](LICENSE). CFSF: copy-free (use for any purpose) and stays-free (nobody may fence this work).
+
+---
+
+[BigO-Hunter](https://github.com/BigO-Hunter) — tracking & packaging org for [Big O Speedrun](https://bigospeedrun.com) contributions · [org profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io)
